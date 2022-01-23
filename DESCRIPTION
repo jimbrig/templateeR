@@ -1,20 +1,36 @@
 Package: templateeR
-Title: What the Package Does (One Line, Title Case)
+Title: Collection of templates for R
 Version: 0.0.0.9000
 Authors@R: 
     person("Jimmy", "Briggs", , "jimmy.briggs@jimbrig.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7489-8787"))
-Description: What the package does (one paragraph).
+Description: Apply variouse R related templates.
 License: MIT + file LICENSE
-Encoding: UTF-8
-Language: en-US
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
-Imports: 
-    magrittr,
-    rlang (>= 0.4.11),
-    tibble
-Suggests: 
-    roxygen2
 URL: https://github.com/jimbrig/templateeR
 BugReports: https://github.com/jimbrig/templateeR/issues
+Depends: 
+    R (>= 2.10)
+Imports: 
+    cli,
+    crayon,
+    fs,
+    glue,
+    here,
+    lifecycle,
+    magrittr,
+    purrr,
+    rlang (>= 0.4.11),
+    tibble,
+    usethis,
+    utils,
+    yaml
+Suggests: 
+    mockr,
+    testthat (>= 3.0.0),
+    withr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
