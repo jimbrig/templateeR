@@ -1,2 +1,6 @@
 ^templateeR\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
+^\.github$
+^README\.Rmd$
+^LICENSE\.md$
