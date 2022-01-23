@@ -26,6 +26,7 @@
 #' }
 #'
 #' @importFrom usethis use_build_ignore
+#' @importFrom utils file.edit
 use_git_cliff <- function(path = "CHANGELOG.md", config = "cliff.toml") {
   installed <- test_git_cliff_installated()
   if (!installed) stop(msg_err("No git-cliff installation detected. Please install and retry."))
@@ -36,7 +37,7 @@ use_git_cliff <- function(path = "CHANGELOG.md", config = "cliff.toml") {
   system("git-cliff -o CHANGELOG.md")
   usethis::use_build_ignore("CHANGELOG.md")
   msg_done("Success: created {msg_path('CHANGELOG.md')}.")
-  file.edit("CHANGELOG.md")
+  utils::file.edit("CHANGELOG.md")
   invisible(0)
 }
 
