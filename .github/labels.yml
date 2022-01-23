@@ -1,0 +1,28 @@
+gh_labels:
+  bug:
+    description: Bugfixes in codebase when something is not working.
+    colour: 'd73a4a'
+  feature:
+    description: New enhancements and features.
+    colour: '1B6659'
+  documentation:
+    description: Improvements or additions to docs.
+    colour: '0075ca'
+  release:
+    description: Indicates a new release.
+    colour: '108a51'
+  config:
+    description: Configuration and meta-infrastructural changes.
+    colour: '8ed92e'
+  refactor:
+    description: Code refactoring.
+    colour: 'D0EFCD'
+  question:
+    description: Further information requested.
+    colour: 'd876e3'
+  data:
+    description: Issues pertaining to data or data preparations.
+    colour: 'FAA631'
+  tests:
+    description: Issues related to tests.
+    colour: 'e4e669'
