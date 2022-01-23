@@ -58,8 +58,9 @@ usethis::use_data_raw("gh-labels")
 # functions ---------------------------------------------------------------
 
 c(
-  "gh-labels",
-  "utils"
+  "utils",
+  "use_gh_labels",
+  "use_git_cliff"
 ) |>
   purrr::walk(usethis::use_r, open = FALSE)
 
