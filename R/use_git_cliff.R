@@ -28,7 +28,7 @@
 #' @importFrom usethis use_build_ignore
 #' @importFrom utils file.edit
 use_git_cliff <- function(path = "CHANGELOG.md", config = "cliff.toml") {
-  installed <- test_git_cliff_installated()
+  installed <- test_git_cliff_installed()
   if (!installed) stop(msg_err("No git-cliff installation detected. Please install and retry."))
   msg_info("Initialize git-cliff configuration file")
   system("git-cliff -i")
@@ -43,7 +43,7 @@ use_git_cliff <- function(path = "CHANGELOG.md", config = "cliff.toml") {
 
 #' Test that `git-cliff` is installed
 #' @keywords internal
-test_git_cliff_installated <- function() {
+test_git_cliff_installed <- function() {
   if (Sys.which("git-cliff") == "") return(FALSE)
   TRUE
 }
