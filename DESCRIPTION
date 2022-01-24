@@ -20,14 +20,14 @@ Imports:
     magrittr,
     purrr,
     rlang (>= 0.4.11),
+    stats,
     tibble,
     usethis,
     utils,
+    whisker,
     yaml
 Suggests: 
-    mockr,
-    testthat (>= 3.0.0),
-    withr
+    testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US

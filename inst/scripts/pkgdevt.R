@@ -60,7 +60,9 @@ usethis::use_data_raw("gh-labels")
 c(
   "utils",
   "use_gh_labels",
-  "use_git_cliff"
+  "use_git_cliff",
+  "use_pkgdevt_script",
+  "render_template"
 ) |>
   purrr::walk(usethis::use_r, open = FALSE)
 
