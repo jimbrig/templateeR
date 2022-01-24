@@ -62,7 +62,8 @@ c(
   "use_gh_labels",
   "use_git_cliff",
   "use_pkgdevt_script",
-  "render_template"
+  "render_template",
+  "github_actions"
 ) |>
   purrr::walk(usethis::use_r, open = FALSE)
 
