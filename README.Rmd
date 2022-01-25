@@ -15,22 +15,27 @@ knitr::opts_chunk$set(
 
 # templateeR
 
-`templateeR` is an R package providing a suite of various R related templates.
-
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/jimbrig/templateeR/workflows/R-CMD-check/badge.svg)](https://github.com/jimbrig/templateeR/actions)
+
 <!-- badges: end -->
 
-The goal of `templateeR` is to provide the R developer easy-to-use, reproducible 
-templates. Additionally, `templateer` attempts to provide developer's more general 
-best practice templates for various workflows and projects.
+`templateeR` is an R package providing a suite of various R related templates.
+
+The goal of `templateeR` is to provide the R developer easy-to-use,
+reproducible templates. Additionally, `templateer` attempts to provide
+developer's more general best practice templates for various workflows
+and projects.
+
+*Keep up-to-date with the latest changes by checking out this package's [Changelog](CHANGELOG.md)*
 
 ## Installation
 
-You can install the development version of `templateeR` from 
-[GitHub](https://github.com/) with:
+You can install the development version of `templateeR` from
+[GitHub](https://github.com/) with: [^1]
 
-```R
+``` r
 pak::pak("jimbrig/templateeR")
 ```
 
@@ -38,10 +43,53 @@ pak::pak("jimbrig/templateeR")
 
 ### General
 
-- [use_git_cliff](R/use_git_cliff.R) - function that generates necessary files to 
-  implement [git-cliff]() functionality for the repo. `git-cliff` auto-generates
-  a [CHANGELOG.md]() using the [Keep a Changelog]() methodology with a provided 
-  `cliff.toml` configuration file.
+-   [use_git_cliff](R/use_git_cliff.R) - function that generates
+    necessary files to implement [git-cliff]() functionality for the
+    repo. `git-cliff` auto-generates a [CHANGELOG.md]() using the [Keep
+    a Changelog]() methodology with a provided `cliff.toml`
+    configuration file.
 
-### Files and Scripts
+-   [render_template](R/render_template.R) - function that renders
+    template files similar to `usethis::use_template`, but more
+    flexible. Utilizes `whisker::whisker.render` and `{{}}` / `{{{}}}`
+    syntax.
 
+-   [msg_helpers](R/msg_helpers.R) - generic user feedback console
+    helper functions ( i.e. `msg_bullet`, `msg_done`, `msg_err`,
+    `msg_path`, etc.). Applied to this package via
+    `jimstools::use_feedback_helpers()`.
+
+### GitHub
+
+-   [use_gh_labels](R/use_gh_labels.R) - Apply customized GitHub Issue
+    labels to your repository with the option to utilize a `labels.yml`
+    configuration file.
+
+-   [github_actions](R/github_actions.R) - Suite of github workflows to
+    add to your repository. Currently supported functions are:
+
+    -   `use_git_cliff_action`
+
+### R Development
+
+-   [use_pkgdevt_script](R/use_pkgdevt_script.R) - Adds a `pkgdevt.R`
+    template script to your current working directory (assuming working
+    on a package). See [this package's `pkgdevt.R`
+    script](inst/scripts/pkgdevt.R) for reference.
+    
+### Roadmap
+
+- ShinyApp Templates
+- RStudio Project Templates
+- RStudio Addins
+- RMarkdown Templates
+- Dockerfile Templates
+- Deployment Script Templates
+- Package Development Workflow Templates
+- Additional GitHub Actions
+
+***
+
+Jimmy Briggs | 2022
+
+[^1]: Similarly, you can install the package using the more common `devtools::install_github()` and `remotes::install_github()`
