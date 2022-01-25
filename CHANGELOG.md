@@ -18,6 +18,7 @@
 - Update README with current functions
 - Document new function man pages
 - Update README with latest additions
+- Enhance README
 
 ### Features
 
@@ -32,6 +33,10 @@
 - Add new function use_git_cliff_action
 - Add git-cliff action to this repo
 - Add inst/templates/workflows
+
+### Miscellaneous Tasks
+
+- Autopublish 2022-01-25T00:15:09Z
 
 ### Config
 
