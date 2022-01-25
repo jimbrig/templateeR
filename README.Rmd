@@ -63,7 +63,8 @@ pak::pak("jimbrig/templateeR")
 
 -   [use_gh_labels](R/use_gh_labels.R) - Apply customized GitHub Issue
     labels to your repository with the option to utilize a `labels.yml`
-    configuration file.
+    configuration file. See the [labels.yml](https://github.com/jimbrig/templateeR/blob/main/.github/labels.yml)
+    configuration file for this repository for details.
 
 -   [github_actions](R/github_actions.R) - Suite of github workflows to
     add to your repository. Currently supported functions are:
@@ -87,6 +88,8 @@ pak::pak("jimbrig/templateeR")
 - Deployment Script Templates
 - Package Development Workflow Templates
 - Additional GitHub Actions
+- Database and SQL Templates
+- Plumber API Templates
 
 ***
 
