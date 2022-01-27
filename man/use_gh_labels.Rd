@@ -4,7 +4,13 @@
 \alias{use_gh_labels}
 \title{Manage GitHub Repository Issue Labels}
 \usage{
-use_gh_labels(path = NULL, ...)
+use_gh_labels(
+  path = NULL,
+  labels = NULL,
+  descriptions = NULL,
+  colors = NULL,
+  ...
+)
 }
 \arguments{
 \item{path}{(Optional) Path to a \code{labels.yml} configuration file specifying the
@@ -12,6 +18,8 @@ GitHub labels in yaml format. See \code{system.file("config/labels.yml", package
 for an example using the default labels this package provides. If left \code{NULL}
 the function will check path \code{.github/labels.yml} first before applying the
 default labels.}
+
+\item{labels, descriptions, colors}{See \code{\link[usethis:use_github_labels]{usethis::use_github_labels()}}}
 
 \item{...}{Passed to \code{\link[usethis:use_github_labels]{usethis::use_github_labels()}}}
 }

@@ -16,7 +16,6 @@ Imports:
     fs,
     glue,
     here,
-    lifecycle,
     magrittr,
     purrr,
     rlang (>= 0.4.11),

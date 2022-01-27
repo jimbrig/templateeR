@@ -112,7 +112,7 @@ msg_feedback <- function(x) {
 #' A wrapper around [rlang::inform()] for providing feedback to developers using
 #' this packages functions.
 #'
-#' @inheritDotParams rlang::inform
+#' @param ... Passed to [rlang::inform()]
 #'
 #' @family Feedback Utilities
 #' @seealso [rlang::inform()]
