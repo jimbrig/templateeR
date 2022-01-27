@@ -6,6 +6,7 @@
 ### Bug Fixes
 
 - Fix spellling of installed for git-cliff function
+- Fix issues in msg_ functions and imports
 
 ### Data
 
@@ -37,6 +38,7 @@
 ### Miscellaneous Tasks
 
 - Autopublish 2022-01-25T00:15:09Z
+- Autopublish 2022-01-25T00:19:03Z
 
 ### Config
 
