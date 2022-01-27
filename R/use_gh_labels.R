@@ -21,6 +21,9 @@
 #'  for an example using the default labels this package provides. If left `NULL`
 #'  the function will check path `.github/labels.yml` first before applying the
 #'  default labels.
+#'
+#' @param labels,descriptions,colors See [usethis::use_github_labels()]
+#'
 #' @param ... Passed to [usethis::use_github_labels()]
 #'
 #' @return invisibly returns list of labels.
@@ -43,17 +46,18 @@
 #' )
 #' }
 #'
-#' @importFrom lifecycle is_present
 #' @importFrom purrr map_depth pluck
+#' @importFrom stats setNames
 #' @importFrom usethis use_github_labels
 #' @importFrom utils data
-#' @importFrom stats setNames
 #' @importFrom yaml read_yaml
-#' @importFrom rlang .env
 use_gh_labels <- function(path = NULL,
+                          labels = NULL,
+                          descriptions = NULL,
+                          colors = NULL,
                           ...) {
 
-  if (is.null(path) && is.null(labels) && file.exists(".github/labels.yml")) {
+  if (is.null(path) && file.exists(".github/labels.yml")) {
     path <- ".github/labels.yml"
     msg_info("Found labels config file: {msg_path(path)}.")
   }
@@ -68,21 +72,20 @@ use_gh_labels <- function(path = NULL,
     )
     msg_info("Loaded labels from config file: {msg_path(path)}.")
 
-  } else if (lifecycle::is_present(labels)) {
+  } else if (!is.null(labels)) {
 
     msg_info("Using provided labels: {msg_value(labels)}.")
 
     gh_labels <- list(
       "labels" = labels,
-      "descriptions" = if (lifecycle::is_present(.env$descriptions)) .env$descriptions else NULL,
-      "colours" = if (lifecycle::is_present(.env$colours)) .env$colours else NULL
+      "descriptions" = descriptions,
+      "colours" = colors
     )
 
   } else {
 
-    msg_info("Nothing provided and no config file found; defaulting to {msg_code('templateeR::gh_labels')} default labels.")
+    msg_info("Nothing provided and no config file found; defaulting to {msg_code('gh_labels')} default labels.")
 
-    utils::data("gh_labels")
     gh_labels <- list(
       "labels" = gh_labels$label,
       "descriptions" = gh_labels$description |> stats::setNames(gh_labels$label),
