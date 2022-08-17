@@ -8,6 +8,13 @@
 - Fix spellling of installed for git-cliff function
 - Fix issues in msg_ functions and imports
 
+### Configuration
+
+- Add .rbuildignore
+- Add R package infrastructure
+- Fix file.edit global
+- Cleanup R directory
+
 ### Data
 
 - Add gh-labels default data exported with package
@@ -34,18 +41,13 @@
 - Add new function use_git_cliff_action
 - Add git-cliff action to this repo
 - Add inst/templates/workflows
+- Enhance git-cliff functionality
 
 ### Miscellaneous Tasks
 
 - Autopublish 2022-01-25T00:15:09Z
 - Autopublish 2022-01-25T00:19:03Z
-
-### Config
-
-- Add .rbuildignore
-- Add R package infrastructure
-- Fix file.edit global
-- Cleanup R directory
+- Autopublish 2022-01-27T22:18:52Z
 
 ### Gitflow-feature-stash
 

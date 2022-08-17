@@ -37,7 +37,13 @@ use_git_cliff <- function(path = "CHANGELOG.md", config = "cliff.toml") {
   system("git-cliff -o CHANGELOG.md")
   usethis::use_build_ignore("CHANGELOG.md")
   msg_done("Success: created {msg_path('CHANGELOG.md')}.")
-  utils::file.edit("CHANGELOG.md")
+  msg_info("Updating cliff.toml configuration file to use custom configs...")
+  fs::file_copy(
+    fs::path_package("templateeR", "config/cliff.toml"),
+    new_path = "cliff.toml",
+    overwrite = TRUE
+  )
+  msg_done("Successfully update cliff.toml with custom configs.")
   invisible(0)
 }
 
