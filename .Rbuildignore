@@ -6,3 +6,4 @@
 ^LICENSE\.md$
 ^cliff\.toml$
 ^CHANGELOG\.md$
+^\.lintr$
