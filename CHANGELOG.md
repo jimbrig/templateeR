@@ -42,12 +42,15 @@
 - Add git-cliff action to this repo
 - Add inst/templates/workflows
 - Enhance git-cliff functionality
+- Add lintr linting
+- Add linting
 
 ### Miscellaneous Tasks
 
 - Autopublish 2022-01-25T00:15:09Z
 - Autopublish 2022-01-25T00:19:03Z
 - Autopublish 2022-01-27T22:18:52Z
+- Autopublish 2022-06-10T20:58:39Z
 
 ### Gitflow-feature-stash
 
